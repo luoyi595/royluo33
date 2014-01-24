@@ -1,0 +1,231 @@
+﻿body {
+  font-family:Arial;
+  font-size:10pt;
+  color: Black;
+}
+a {
+  text-decoration: none;
+  color:DarkBlue;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.Window {
+  width: 100%;
+}
+.Window .Main {
+  width: 950px;
+  margin: auto;
+}
+.Window .Main .Left {
+  width: 220px;
+  float: left;
+}
+.Window .Main .Left .Container {
+  margin: 0px 0px 10px 10px;
+  float: left;
+}
+.Window .Main .Right {
+  width: 730px;
+  float: left;
+}
+.Window .Main .Right .Header{
+  margin: 5px 5px 5px 0px;
+  width: 100%;
+  text-align: center;
+}
+.Window .Main .Right .Contents{
+  margin: 5px 5px 5px 0px;
+  width: 100%;
+  float: left;
+}
+
+.DepartmentsList
+{
+    border: 1px solid #FFFF00;
+    text-align: center;
+    margin-top: 20px;
+}
+.DepartmentsListHead
+{
+    border: #01a647 1px solid;
+    background-color: #999966;
+}
+a.DepartmentUnselected {
+  line-height: 25px;
+  text-decoration: none;
+  color: Black;
+}
+a.DepartmentUnselected:hover {
+  text-decoration: underline;
+}
+a.DepartmentSelected {
+  line-height: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: Black;
+}
+
+.CategoriesList {
+  border: #ea6d00 1px solid;
+  text-align: center;
+  margin-top: 20px;
+}
+.CategoriesListHead {
+  border: #01a647 1px solid;
+  background-color: #999966;
+}
+a.CategoryUnselected {
+  line-height: 25px;
+  text-decoration: none;
+  color: Black;
+}
+a.CategoryUnselected:hover {
+  text-decoration: underline;
+}
+a.CategorySelected {
+  line-height: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: Black;
+}
+
+.CatalogTitle {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+.CatalogDescription {
+  color: Black;
+  font-weight: bold;
+  font-size: 14px;
+}
+.Window .Main .Right .Contents{
+  margin: 5px 5px 5px 0px;
+  width: 100%;
+  float: left;
+}
+
+.ProductList img {
+  border: 2px solid #c6e1ec;
+  float: left;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.ProductTitle {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 1px 0 0;
+}
+
+.DetailSection {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.SearchBox {
+  border-collapse:collapse;
+  margin-top: 20px;
+  width:200px;
+  height:40px;
+}
+.SearchBoxHead {
+    border: #CD2C24 1px;
+    background-color: #CD2C24;
+    text-align: center;
+}
+.SearchBoxContent {
+  border: #0468a4;
+  padding: 5px 0px 5px 12px;
+  background-color: #CD2C24;
+}
+
+.UserInfoHead1 {
+    border: #CD2C24 ;
+    background-color:black;
+    text-align: center;
+    color:white;
+}  
+.UserInfoContent {
+    border: #cc6666;
+    padding: 5px 0px 5px 12px;
+    line-height: 20px;
+} 
+
+.AdminTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+.Window .Main .Right .AdminHeader{
+  margin: 5px 5px 5px 0px;
+  width: 100%;
+}
+
+.AdminContents{
+  margin: 5px 5px 5px 0px;
+  width: 900px;
+  float: left;
+}
+.AdminError{
+  color: Red;
+}
+
+.Grid {
+  border-color: #E7E7FF;
+  margin-top: 20px;
+  width: 100%;
+}
+.GridHeader { 
+  color: White;
+  background-color: Navy;
+}
+.GridRow
+{ 
+  color: Navy;
+  background-color: #E7E7FF;
+}
+.GridSelectedRow
+{ 
+  color: #F7F7F7;
+  background-color: #738A9C;
+}
+.GridEditingRow
+{
+  color: Navy;
+}
+.GridAlternateRow
+{ 
+  color: Navy;
+  background-color: #F7F7F7;
+}
+
+.WideLabel {
+  display:-moz-inline-block;
+  display:inline-block;
+  width: 100px;
+}
+.CartSummary {
+  border: #0468a4 1px solid;
+  background-color: snow;
+  padding: 3px 2px 5px;
+    border-collapse:collapse;
+  margin-top: 20px;
+}
+
+.RecommendationsHead { 
+  font-weight: bold;
+}
+
+.RecommendationLabel {
+  display:-moz-inline-block;
+  display:inline-block;
+  width: 200px;
+}
+
+.UserDetailsTable {
+  width: 100%;
+  background-color: #ccccff;
+  border: Solid 1px Navy;
+  line-height: 20px;
+}
