@@ -1,0 +1,389 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BalloonShop.master.cs"
+  Inherits="BalloonShop" %>
+
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc1" %>
+<%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc2" %>
+<%@ Register src="UserControls/SearchBox.ascx" tagname="SearchBox" tagprefix="uc3" %>
+<%@ Register src="UserControls/UserInfo.ascx" tagname="UserInfo" tagprefix="uc4" %>
+<%@ Register src="UserControls/CartSummary.ascx" tagname="CartSummary" tagprefix="uc5" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>CameraShop: Online Store </title>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+    
+    <!--add by atom for meunbar, bottomTable-->
+    <link href="/menu_assets/navigation_styles.css" rel="stylesheet" type="text/css">
+    <link href="/CSS_Folder/bottom_styles.css" rel="stylesheet" type="text/css">
+    <!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+    <style type="text/css">
+        .style1
+        {
+           
+           text-align:center;
+           margin-bottom: 0px;
+           border-spacing:0px;
+           border-collapse:collapse;
+            height: 93px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+        }
+        .auto-style2 {
+            width: 670px;
+            text-align: left;
+            background-color:rgb(205,44,36);
+        }
+        .auto-style3 {
+            width:100%;
+        }
+        .auto-style4 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 39px;
+            width: 33px;
+            font-size:18px;
+        }
+        .auto-style5 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 39px;
+            width: 127px;
+            font-size:18px;
+        }
+        .auto-style6 {
+            font-size: 18px;
+            height: 39px;
+            width: 32px;
+        }
+        .auto-style8 {
+            width:59px;
+        }
+        .auto-style10 {
+            height: 16px;
+        }
+        .auto-style11 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 16px;
+            width: 33px;
+            font-size: 18px;
+        }
+        .auto-style12 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 16px;
+            width: 127px;
+            font-size: 18px;
+        }
+        .auto-style13 {
+            font-size: 18px;
+            height: 16px;
+            width: 32px;
+        }
+        .auto-style14 {
+            font-size: small;
+            height: 16px;
+        }
+        .auto-style16 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 14px;
+            width: 33px;
+            font-size: 18px;
+        }
+        .auto-style17 {
+            vertical-align: middle;
+            text-align: left;
+            font-size: small;
+            height: 14px;
+            width: 127px;
+            font-size: 18px;
+        }
+        .auto-style18 {
+            font-size: 18px;
+            height: 14px;
+            width: 32px;
+        }
+        .auto-style19 {
+            font-size: small;
+            height: 14px;
+        }
+        .auto-style20 {
+            width: 587px;
+        }
+        .auto-style21 {
+            width: 70px;
+        }
+        .auto-style22 {
+            width: 676px;
+            height: 103px;
+        }
+        </style>
+    
+</head>
+<!--Up button Javascript start-->
+
+<script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js">
+    </script>
+     <script type="text/javascript" language="javascript">
+         $(function () {
+             $('#scrlBotm').click(function () {
+                 $('html, body').animate({
+                     scrollTop: $(document).height()
+                 },
+                 1500);
+                 return false;
+             });
+
+             $('#scrlTop').click(function () {
+                 $('html, body').animate({
+                     scrollTop: '0px'
+                 },
+                 1500);
+                 return false;
+             });
+         });
+</script>
+    
+<!--javascript start here-->
+<script type="text/JavaScript">
+    //<!--
+    function MM_findObj(n, d) { //v4.01
+        var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+            d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n); return x;
+    }
+
+    function MM_preloadImages() { //v3.0
+        var d = document; if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+        }
+    }
+
+    function MM_swapImgRestore() { //v3.0
+        var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2) ; i += 3)
+            if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+    }
+    //-->
+</script>
+
+<!--Javascript end-->
+
+
+
+<body >
+  <form id="form1" runat="server">
+<!--new test form here, add by atom-->
+      <!--new shop logo and customer log in-->
+<center>
+<div style="width:100%;">
+    <table class="style1">
+        <tr>
+            <td class="auto-style2" >
+                <img alt="shopLogo" class="auto-style22" src="/MasterImg/ShopLogo.png" /></td>
+            <td style="vertical-align: top; font-family:Arial; font-size:small; font-weight:bold;  background-color:rgb(205,44,36);">
+            <center style="text-align: center">
+                  <asp:Label ID="timeWelcomeLabel" runat="server" Font-Size="Large" ForeColor="White" ></asp:Label>
+                  <strong><span>
+                  <br />
+                  <br />
+                  Select Language </span></strong> 
+                <div id="google_translate_element"></div><script type="text/javascript">
+                                                             function googleTranslateElementInit() {
+                                                                 new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true }, 'google_translate_element');
+                                                             }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+            </center>
+            </td>
+        </tr>
+        </table>
+</div>
+</center>
+    <table class="style1">
+        <tr style="font-family:'Buxton Sketch'; font-size:18px; ">
+            <td class="auto-style10" ></td>
+            <td class="auto-style11">
+                </td>
+            <td class="auto-style12">
+                </td>
+            <td style="vertical-align: middle; text-align: left;" class="auto-style13">
+               </td>
+            <td style="vertical-align: middle; text-align: left; font-size:18px;" class="auto-style14">
+                </td>
+        </tr>
+        <tr style="font-family:'Buxton Sketch'; font-size:18px; ">
+            <td class="style25" ><asp:Label ID="welcomeMsg" runat="server" ></asp:Label></td>
+            <td class="auto-style4">
+                <a target="_blank" href="http://www.facebook.com/sheng.nong" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','/MasterImg/social_1_facebook.jpg',1)"><img src="/MasterImg/facebook.png" name="Image3" width="30" height="30" border="0" align="absmiddle" id="Image3" ></img></a></td>
+            <td class="auto-style5">
+                Visit our FB page</td>
+            <td style="vertical-align: middle; text-align: left;" class="auto-style6">
+               <a target="_blank" href="https://twitter.com/#!/jueyuansanqv" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','/MasterImg/twitter-icon.png',1)"><img src="/MasterImg/twitter_logo30.png" name="Image4" width="30" height="30" border="0" align="absmiddle" id="Image4" /></a></td>
+            <td style="vertical-align: middle; text-align: left; font-size:18px;" class="style26">
+                Follow us on Twitter</td>
+        </tr>
+        <tr style="font-family:'Buxton Sketch'; font-size:18px; ">
+            <td class="style23" ></td>
+            <td class="auto-style16">
+                </td>
+            <td class="auto-style17">
+                </td>
+            <td style="vertical-align: middle; text-align: left;" class="auto-style18">
+               </td>
+            <td style="vertical-align: middle; text-align: left; font-size:18px;" class="auto-style19">
+                </td>
+        </tr>
+        <tr style="font-family:'Buxton Sketch'; font-size:18px; ">
+            <td class="auto-style3" colspan="5" >
+                <!--navigation bar start here-->
+                <div id='cssmenu'>
+<ul>
+   <li class='active '><a href='http://www.example.com/Default.aspx'><span>Home</span></a></li>
+   <li class='has-sub '><a href='#'><span>Digital Camera</span></a>
+      <ul>
+         <li class='has-sub '><a href='http://www.example.com/Digital-Camera-d1/Canon-c1/'><span>Canon</span></a>
+         </li>
+         <li class='has-sub '><a href='http://www.example.com/Digital-Camera-d1/Sony-c2/'><span>Sony</span></a>
+         </li>
+         <li class='has-sub '><a href='http://www.example.com/Digital-Camera-d1/Fuji-c3/'><span>Fuji</span></a>
+         </li>
+      </ul>
+   </li>
+    <li class='has-sub '><a href='#'><span>Digital SLR</span></a>
+      <ul>
+         <li class='has-sub '><a href='http://www.example.com/Digital-SLR-d2/Nikon-c4/'><span>Nikon</span></a>
+         </li>
+         <li class='has-sub '><a href='http://www.example.com/Digital-SLR-d2/Pentax-c5/'><span>Pentax</span></a>
+         </li>
+      </ul>
+   </li>
+    <li class='has-sub '><a href='#'><span>Lenses</span></a>
+      <ul>
+         <li class='has-sub '><a href='http://www.example.com/Lense-d7/BowerCanon-c6/'><span>Bower_Canon</span></a>
+         </li>
+         <li class='has-sub '><a href='http://www.example.com/Lense-d7/BowerNikon-c22/'><span>Bower_Nikon</span></a>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About Us</span></a>
+       <ul>
+         <li class='has-sub '><a href="/WebsiteHistory.aspx"><span>Website History</span></a>
+         </li>
+         <li class='has-sub '><a href="/SiteMap.aspx"><span>Site Map</span></a>
+         </li>
+      </ul>
+   </li>
+</ul>
+</div>
+                <!--navigation bar end here-->
+
+                </td>
+        </tr>
+    </table>
+      <table class="auto-style3">
+          <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+      </table>
+    <div>
+
+        <table align="center" style="border-style: groove; border-width: thin; padding: 0px; width:71%; border-spacing: 0px; height: 457px;" frame="border">
+            <tr>
+                <td class="auto-style21" style="margin: 0px; text-align: left; vertical-align: top;">
+                    
+                </td>
+                <td class="auto-style20" style="margin: 0px; text-align: left; vertical-align: top;">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+          </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style8" style="margin: 0px; text-align: left; vertical-align: top;">
+                    &nbsp;</td>
+            </tr>
+            </table>
+
+    </div>
+    <p style="color:white;">add by atom </p>
+    <p style="color:white;">add by atom </p>
+
+<!--search box-->
+          <div style=" position:absolute;  margin-top:148px;  left: 868px; width: 189px; top: 13px;"><uc3:SearchBox ID="SearchBox1" runat="server" /></div>
+                    
+
+<!--shopping cart-->
+          <div style="float:right; position:fixed; left:1088px; top:169px;">
+          <uc5:CartSummary ID="CartSummary1" runat="server" />
+          </div>
+
+<!--uc department-->
+<!--uc category-->
+      
+<!--up button start here-->
+    <a id="scrlTop" class="pos_fixed" href="#top" >
+    <img src="/MasterImg/up_arrow.png" alt="Go to top" style="padding-right: 3px; border:none" height="60" width="60" />
+    </a>
+<!--up button end here-->    
+<center>
+    <div>
+     <table align="center" class="style1">
+        <tr>
+            <td class="style14" 
+                
+                style="border-bottom-width: medium; border-bottom-style: solid; border-bottom-color: #000000;">
+                About Us</td>
+            <td class="style14" 
+                
+                style="border-bottom-width: medium; border-bottom-style: solid; border-bottom-color: #000000;">
+                Site Map</td>
+            <td class="style16" 
+                
+                style="border-bottom-width: medium; border-bottom-style: solid; border-bottom-color: #000000;">
+                Contact Us</td>
+            <td class="style16" 
+                
+                style="border-bottom-width: medium; border-bottom-style: solid; border-bottom-color: #000000;">
+                Customer Service</td>
+        </tr>
+        <tr>
+            <td class="style17" style="border-top-width: medium; text-align: center;">
+                <a class="style21" href="\WebsiteHistory.aspx"><span class="style22">Website History</span></a></td>
+            <td class="style17" style="border-top-width: medium; text-align: center;">
+                <a class="style21" href="\SiteMap.aspx"><span class="style22">Site Map</span></a></td>
+            <td style="border-top-width: medium" class="style19">
+                <a href="mailto:jueyuansanqv22@gmail.com" target="_blank" class="style21" 
+                    style="color: #000000">
+                <span class="style12">Email: jueyuansanqv22@gmail.com</span>
+                </a>
+                </td>
+            <td class="style20" style="border-top-width: medium; text-align: center;">
+                <a class="style21" href="\FeedBack.aspx"><span class="style22">Feedback</span></a></td>
+        </tr>
+    </table>
+    </div>
+</center>
+      <p style="color:white;">add by atom</p>
+<p style="text-align:center; font-size:13px; font-weight:bold;">---- Copyright ©2012 Tomato Garden. All rights reserved. ----</p>
+  </form>
+</body>
+</html>
